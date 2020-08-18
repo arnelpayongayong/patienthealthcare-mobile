@@ -1,5 +1,15 @@
 <ion-content fullscreen class="background">
-  <div style="margin-top: 50%">
+  <div class="container-flex">
+    <h1>NAGA CITY HOSPITAL</h1>
+    <div class="username flex-item">
+      <ion-input ion-text color="primary" placeholder="Patient Identification" required type="text"  [(ngModel)]="patientID" style="color: white;"> </ion-input>
+    </div>
+
+    <div class="member flex-item">
+      <ion-button expand="block" type="submit" class="ion-no-margin" (click)="login()">Login</ion-button>
+    </div>
+  </div>
+  <!-- <div style="margin-top: 50%">
     <ion-input required type="text"  [(ngModel)]="patientID" style="font-size: large;color: white;margin:0 auto;width:50%" placeholder="Patient Identification"></ion-input>
   </div>
   <br><br><br>
@@ -8,5 +18,5 @@
   </div>
   <div class="ion-padding" style="opacity: 85%;">
     <ion-button expand="block" type="submit" class="ion-no-margin" (click)="sample()">Login as Guest</ion-button>
-  </div>
+  </div> -->
 </ion-content>

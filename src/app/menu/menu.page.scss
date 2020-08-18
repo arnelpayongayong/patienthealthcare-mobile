@@ -1,4 +1,18 @@
-.active-item{
-    border-left: 8px solid var(--ion-color-primary);
+.header{
+    font-family: 'Open Sans';
+    font-weight: 100;
 }
-
+.card-content{
+    font-family: 'Open Sans';
+}
+.item{
+    --ion-label{
+        font-family: 'Open Sans';
+        font-weight: 100;
+    }
+}
+.menu-button{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

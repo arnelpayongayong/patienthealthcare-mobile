@@ -1,13 +1,13 @@
-<ion-app>
+<ion-app class="app">
   <ion-menu side="start" menuId="first" contentId="content1">
       <ion-content>
         <ion-card color="primary">
-          <ion-card-header>
-            <ion-card-subtitle>{{currentPatient.id}}</ion-card-subtitle>
+          <ion-card-header class="header">
             <ion-card-title>{{currentPatient.firstname + ' ' + currentPatient.lastname}}</ion-card-title>
+            <ion-card-subtitle>PIN : {{currentPatient.id}}</ion-card-subtitle>
           </ion-card-header>
         
-          <ion-card-content>
+          <ion-card-content class="card-content">
             <ion-text>
               <ion-label expand>Gender : {{(currentPatient.gender === 'M')?'Male':'Female'}}</ion-label>
             </ion-text>
@@ -16,16 +16,16 @@
         <ion-card>
           <ion-list *ngFor="let pages of pages">
           <ion-menu-toggle auto-hide="true">
-            <ion-item [routerLink]="pages.url" routerDirection="forward" [class.active-item]="selectedPath === pages.url">
-                <ion-icon [name]="pages.icon" slot="start" color="newcolor"></ion-icon>
-                    <ion-label>{{pages.title}}</ion-label>
+            <ion-item [routerLink]="pages.url" routerDirection="forward" [class.active-item]="selectedPath === pages.url" class="item">
+                <ion-icon [name]="pages.icon" slot="start" color="primary"></ion-icon>
+                <ion-label>{{pages.title}}</ion-label>
             </ion-item>
           </ion-menu-toggle>
           </ion-list>
-          <ion-item>
-            <ion-button (click)="logout()">Logout</ion-button>
-          </ion-item>
       </ion-card>
+
+        <ion-button (click)="logout()" class="menu-button">Logout</ion-button>
+
       </ion-content>
     </ion-menu>
 <ion-router-outlet id="content1"></ion-router-outlet>

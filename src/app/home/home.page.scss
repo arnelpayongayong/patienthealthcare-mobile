@@ -1,38 +1,31 @@
-#container {
-  background-color: #FF4136;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  
+.container-flex{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(26, 188, 156, 0.623),rgba(39, 174, 95, 0.596)),url('../../assets/images/health.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+}
+.container-flex h1{
+  font-family: 'Open Sans';
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+.flex-item {
+  margin: 10px;
+  width: 80%;
+  font-family: 'Open Sans';
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-input {
+  --placeholder-color: white;     /* placeholder text color */
+  --placeholder-font-weight: 400;
+  font-size: larger;
+  font-family: 'Open Sans';
+  font-weight: 800;
+  text-align: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-ion-content ion-toolbar {
-  --background: translucent;
-}
-ion-content.background{
-    --background: url(../../assets/icon/background.png) no-repeat fixed center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}

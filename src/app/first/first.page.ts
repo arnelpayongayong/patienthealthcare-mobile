@@ -11,10 +11,6 @@ export class FirstPage implements OnInit {
   constructor(public storage: Storage) { }
 
   ngOnInit() {
-    this.storage.get('color').then((name) => {
-      console.log('Me: Hey, ' + name + '! You have a very nice name.');
-      console.log('You: Thanks! I got it for my birthday.');
-    });
   }
 
 }
